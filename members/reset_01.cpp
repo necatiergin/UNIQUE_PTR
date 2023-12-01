@@ -1,9 +1,10 @@
-#include "triple.h"
+#include "point.h"
 #include <memory>
+#include <iostream>
 
 int main()
 {
-	auto upx = std::make_unique<Triple>(10, 30, 56);
+	auto upx = std::make_unique<Point>(10, 30, 56);
 	std::cout << *upx << '\n';
 	std::cout << (upx ? "not empty" : "empty") << '\n';
 	upx.reset();
