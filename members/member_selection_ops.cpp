@@ -1,15 +1,15 @@
 #include <iostream>
 #include <memory>
-#include "triple.h"
+#include "point.h"
 
 int main()
 {
 	using namespace std;
-	
+
 	cout << "main basladi\n";
 
 	{
-		unique_ptr<Triple> upx{ new Triple{10, 20, 30} };
+		unique_ptr<Point> upx{ new Point{10, 20, 30} };
 
 		cout << (upx ? "not empty" : "empty") << "\n";
 		cout << *upx << '\n';
