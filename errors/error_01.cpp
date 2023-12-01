@@ -1,4 +1,4 @@
-#include "triple.h"
+#include "point.h"
 #include <memory>
 #include <cstdio>
 
@@ -6,11 +6,11 @@ int main()
 {
 	using namespace std;
 
-	Triple* ptr = new Triple{ 1, 2, 3 };
+	Point* ptr = new Point{ 1, 2, 3 };
 
 	{
-		unique_ptr<Triple> upx{ ptr };
+		unique_ptr<Point> upx{ ptr };
 	}
 	(void)getchar();
-	unique_ptr<Triple> upy{ ptr };  //ub, ptr is a dangling pointer
+	unique_ptr<Point> upy{ ptr };  //ub, ptr is a dangling pointer
 }
