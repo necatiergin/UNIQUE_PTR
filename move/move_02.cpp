@@ -1,7 +1,7 @@
-#include "triple.h"
 #include <memory>
+#include <string>
 
-std::unique_ptr<Triple> func(void);
+std::unique_ptr<std::string> func(void);
 
 int main()
 {
