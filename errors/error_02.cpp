@@ -2,7 +2,6 @@
 #include <memory>
 #include <iostream>
 
-
 int main()
 {
 	auto upx = std::make_unique<Point>(1, 2, 3);
