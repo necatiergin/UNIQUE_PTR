@@ -1,10 +1,10 @@
 #include <memory>
-#include "triple.h"
+#include "point.h"
 
 int main()
 {
-	auto upx = std::make_unique<Triple>(1, 4, 7);
-	Triple* ptr = upx.get();
+	auto upx = std::make_unique<Point>(1, 4, 7);
+	Point* ptr = upx.get();
 
-	std::unique_ptr<Triple> upy(ptr); //ub
+	std::unique_ptr<Point> upy(ptr); //ub
 }
