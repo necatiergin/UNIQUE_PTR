@@ -1,11 +1,11 @@
-#include "triple.h"
+#include <string>
 #include <iostream>
 
 int main()
 {
 	using namespace std;
 
-	auto upx = make_unique<Triple>(10, 30, 56);
+	auto upx = make_unique<string>(10, 'T');
 	cout << *upx << "\n";
 	cout << (upx ? "not empty" : "empty") << '\n';
 
