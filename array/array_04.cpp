@@ -17,7 +17,7 @@ struct Data {
 
 int main()
 {
-	std::cout << "sizeof(Data) = " << sizeof(Data) << "\n";
+	std::cout << "sizeof(Data) = " << sizeof(Data) << '\n';
 
 	auto up = std::make_unique<Data[]>(4);
 	//...
