@@ -19,7 +19,7 @@ int main()
 	upvec.push_back(get_name("ziya"));
 
 	//for (auto up : upvec) {  //gecersiz
-	for (auto &up : upvec) {  
-		std::cout << *up << "\n";
+	for (const auto& up : upvec) {
+		std::cout << *up << '\n';
 	}
 }
