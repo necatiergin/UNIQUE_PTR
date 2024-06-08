@@ -1,13 +1,13 @@
 #include <memory>
-#include "triple.h"
+#include "point.h"
 
-std::unique_ptr<Triple>make_triple(int a, int b, int c)
+std::unique_ptr<Point>make_point(int a, int b, int c)
 {
-	return std::make_unique<Triple>(a, b, c);
+	return std::make_unique<Point>(a, b, c);
 }
 
 int main()
 {
-	auto p1 = make_triple(1, 2, 3);
-	auto p2 = make_triple(-1, -2, -3);
+	auto p1 = make_point(1, 2, 3);
+	auto p2 = make_point(-1, -2, -3);
 }
