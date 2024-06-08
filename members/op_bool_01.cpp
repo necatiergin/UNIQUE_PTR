@@ -9,19 +9,21 @@ int main()
 	std::cout.setf(std::ios::boolalpha);
 
 	if (upx != nullptr)
-		std::cout << "dolu\n";
+		std::cout << "not empty\n";
 	else
-		std::cout << "bos\n";
+		std::cout << "empty\n";
 
 	if (upx)
-		std::cout << "dolu\n";
+		std::cout << "not empty\n";
 	else
-		std::cout << "bos\n";
+		std::cout << "empty\n";
 
-	upx.reset(new std::string{ "neco" });
+	upx.reset(new std::string{ "necati ergin" });
 
 	if (upx)
-		std::cout << "dolu\n";
+		std::cout << "not empty\n";
 	else
-		std::cout << "bos\n";
+		std::cout << "empty\n";
+
+	std::cout << (upx ? "not " : "") << "empty" << '\n';
 }
