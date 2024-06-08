@@ -17,7 +17,7 @@ struct Data {
 
 int main()
 {
-	std::cout << "sizeof(Data) = " << sizeof(Data) << "\n";
+	std::cout << "sizeof(Data) = " << sizeof(Data) << '\n';
 
 	std::unique_ptr<Data[]>up(new Data[4]);
 }
