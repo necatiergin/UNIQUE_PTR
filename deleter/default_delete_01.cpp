@@ -12,7 +12,7 @@ class UniquePtr {
 	~UniquePtr()
 	{
 		if (mp)
-			D{}(mp);
+			get_deleter()(mp);
 	}
 private:
 	T* mp;
