@@ -25,7 +25,6 @@ int main()
 	}
 	catch (const std::exception& ex) {
 		cout << "exception caught: " << ex.what() << '\n';
-
 	}
 
 	cout << "main goes on\n";
