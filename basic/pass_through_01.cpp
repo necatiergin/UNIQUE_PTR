@@ -7,7 +7,7 @@
 std::unique_ptr<Point>
 func(std::unique_ptr<Point> uptr)
 {
-	std::cout << *uptr << "\n";
+	std::cout << *uptr << '\n';
 	uptr->set(0, 0, 0);
 	///
 	return uptr;
@@ -19,5 +19,5 @@ int main()
 
 	upx = func(move(upx));
 
-	std::cout << *upx << "\n";
+	std::cout << *upx << '\n';
 }
