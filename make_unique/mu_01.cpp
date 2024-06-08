@@ -10,10 +10,10 @@ std::unique_ptr<T> MakeUnique(Args && ...args)
 
 int main()
 {
-	std::cout << "main basladi\n";
+	std::cout << "main starts running\n";
 	auto uptr = MakeUnique<Point>(10, 20, 30);
 
-	std::cout << *uptr << "\n";
+	std::cout << *uptr << '\n';
 	uptr->set(3, 4, 7);
-	std::cout << *uptr << "\n";
+	std::cout << *uptr << '\n';
 }
