@@ -6,17 +6,15 @@ using NecPtr = std::unique_ptr<Point>;
 
 int main()
 {
-	using namespace std;
-
-	vector<NecPtr> myvec;
+	std::vector<NecPtr> myvec;
 
 	for (int i = 0; i < 5; ++i)
-		myvec.push_back(make_unique<Point>(i, i, i));
+		myvec.push_back(std::make_unique<Point>(i, i, i));
 
 	for (int i = 0; i < 5; ++i)
 		myvec.emplace_back(new Point{ i * i, i * i, i * i });
 
-	myvec.push_back(unique_ptr<Point>{new Point{ -1, -1, -1 }});
+	myvec.push_back(NecPtr>{new Point{ -1, -1, -1 }});
 
 	{
 		auto uptr = move(myvec[3]);
@@ -25,5 +23,6 @@ int main()
 
 	(void)getchar();
 
-	cout << "main is still running\n";
+	std::cout << "main is still running\n";
+	//...
 }
