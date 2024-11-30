@@ -19,7 +19,7 @@ int main()
 	upvec.emplace_back(new std::string{ "ayse" });
 	upvec.push_back(get_name("ziya"));
 
-	//for (auto up : upvec) {  //gecersiz
+	//for (auto up : upvec) {  //invalid
 	for (const auto& up : upvec) {
 		std::cout << *up << '\n';
 	}
