@@ -12,7 +12,7 @@ void bar(std::unique_ptr<std::string>);
 
 int main()
 {
-	using namespace std;
+	using namespace std::unique_ptr, std::string;
 
 	//unique_ptr<string> ux = new string; //invalid
 	unique_ptr<string> ux(new string); //valid
