@@ -1,13 +1,13 @@
 #include <memory>
-#include "triple.h"
+#include "point.h"
 #include <iostream>
 
 int main()
 {
-	using namespace std;
+	using std::cout;
 
-	auto upx = make_unique<Triple>(10, 30, 56);
-	auto upy = make_unique<Triple>(-6, -1, -20);
+	auto upx = std::make_unique<Point>(10, 30, 56);
+	auto upy = std::make_unique<Point>(-6, -1, -20);
 
 	cout << "upx = " << (upx ? "not empty" : "empty") << '\n';
 	cout << "upy = " << (upy ? "not empty" : "empty") << '\n';
