@@ -4,7 +4,7 @@
 
 int main()
 {
-	using namespace std;
+	using std::unique_ptr, std::string, std::cout;
 
 	unique_ptr<string> upx;
 
