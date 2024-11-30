@@ -4,9 +4,9 @@
 
 int main()
 {
-	using namespace std;
+	using std::cout, std::unique_ptr;
 
-	cout << "main basladi\n";
+	cout << "main started\n";
 
 	{
 		unique_ptr<Point> upx{ new Point{10, 20, 30} };
