@@ -9,13 +9,14 @@ std::unique_ptr<std::string> get_name(const char* p)
 
 int main()
 {
-	using namespace std;
+	using strptr = std::unique_ptr<std::string>;
+	using upvector = std::vector<strptr>;
 
-	vector<unique_ptr<string>> upvec;
+	upvector upvec;
 
-	upvec.push_back(make_unique<string>("alican"));
-	upvec.push_back(unique_ptr<string>{new string{ "muzaffer" }});
-	upvec.emplace_back(new string{ "ayse" });
+	upvec.push_back(std::make_unique<std::string>("alican"));
+	upvec.push_back(strptr{new std::string{ "muzaffer" }});
+	upvec.emplace_back(new std::string{ "ayse" });
 	upvec.push_back(get_name("ziya"));
 
 	//for (auto up : upvec) {  //gecersiz
