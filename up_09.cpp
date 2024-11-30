@@ -18,10 +18,8 @@ struct Nec {
 
 int main()
 {
-	using namespace std;
-
 	{
-		std::cout << "sizeof(Nec) = " << sizeof(Nec) << "\n";
+		std::cout << "sizeof(Nec) = " << sizeof(Nec) << '\n';
 		auto up = make_unique<Nec[]>(5);
 	}
 	std::cout << "hello world!\n";
