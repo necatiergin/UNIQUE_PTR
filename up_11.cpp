@@ -13,7 +13,7 @@ struct SDeleter {
 
 int main()
 {
-	using namespace std;
+	using std::string;
 
-	unique_ptr<string, SDeleter> uptr{ new string{"Necati Ergin"} };
+	std::unique_ptr<string, SDeleter> uptr{ new string{"Necati Ergin"} };
 }
