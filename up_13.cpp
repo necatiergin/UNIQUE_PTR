@@ -9,7 +9,7 @@ void mydeleter(std::string* p)
 
 int main()
 {
-	using namespace std;
+	using std::string;
 
-	unique_ptr<string, decltype(&mydeleter)> uptr{ new string{"necati ergin"}, mydeleter };
+	std::unique_ptr<string, decltype(&mydeleter)> uptr{ new string{"necati ergin"}, mydeleter };
 }
