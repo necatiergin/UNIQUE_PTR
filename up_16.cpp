@@ -7,7 +7,6 @@ struct Data {
 Data* createData(void);
 void  cleanup(Data* p);
 
-
 struct DataCleaner {
 	void operator()(Data* p)
 	{
