@@ -20,7 +20,7 @@ int main()
 {
 	{
 		std::cout << "sizeof(Nec) = " << sizeof(Nec) << '\n';
-		auto up = make_unique<Nec[]>(5);
+		auto up = std::make_unique<Nec[]>(5);
 	}
 	std::cout << "hello world!\n";
 	//...
