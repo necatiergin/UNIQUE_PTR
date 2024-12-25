@@ -1,7 +1,6 @@
 #include <iostream>
 #include <memory>
 
-
 class Point {
 public:
 	Point() = default;
