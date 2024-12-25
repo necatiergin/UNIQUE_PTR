@@ -1,6 +1,36 @@
 #include <iostream>
 #include <memory>
-#include "point.h"
+
+
+class Point {
+public:
+	Point() = default;
+	Point(int x, int y, int z) : mx{x}, my{y}, mz{z} 
+	{
+		std::cout << "Point ctor\n"; 
+	}
+
+	~Point()
+	{
+		std::cout << "Point dtor\n"; 
+	}
+
+	Point& set(int x, int y, int z)
+	{
+		mx = x;
+		my = y;
+		mz = z;
+		return *this;
+	}
+
+	friend std::ostream& operator<<(std::ostream& os, const Point& p)
+	{
+		return os << '(' << p.mx << ", " << p.my << ", " << p.mz << ')';
+	}
+
+private:
+	int mx{}, my{}, mz{};
+};
 
 int main()
 {
@@ -15,7 +45,6 @@ int main()
 		cout << *upx << '\n';
 		upx->set(3, 6, 7);
 		cout << *upx << '\n';
-		cout << "the end of the nested block\n";
 	}
 
 	cout << "main goes on\n";
