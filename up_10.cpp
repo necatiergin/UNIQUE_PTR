@@ -1,5 +1,6 @@
 #include <memory>
 #include <iostream>
+#include <cstdio>
 
 int main()
 {
@@ -9,5 +10,6 @@ int main()
 		};
 
 	std::unique_ptr<std::FILE, decltype(f)> uptr(std::fopen("necati.txt", "w"), f);
+	fprintf(uptr.get(), "necati ergin");
 	//...
 }
