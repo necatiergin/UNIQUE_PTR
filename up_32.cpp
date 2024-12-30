@@ -14,7 +14,7 @@ int main()
 	for (int i = 0; i < 5; ++i)
 		myvec.emplace_back(new Point{ i * i, i * i, i * i });
 
-	myvec.push_back(NecPtr>{new Point{ -1, -1, -1 }});
+	myvec.push_back(NecPtr{new Point{ -1, -1, -1 }});
 
 	{
 		auto uptr = move(myvec[3]);
